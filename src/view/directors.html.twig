@@ -1,0 +1,16 @@
+{% extends "base.html.twig" %}
+
+{% block title %}Directors{% endblock %}
+
+{% block content %}
+
+ {% for director in directors %}
+   <img src="./public/img/{{ director.photo}}"> <br/>
+   {{ director.firstname }} &nbsp;
+   {{ director.surname }} <br/>
+   <a href="http://localhost/poo/mvcfilmobjet/fupdatedirector/{{ director.id_director }}">Modifier</a>
+   <a href="http://localhost/poo/mvcfilmobjet/deletedirector/{{ director.id_director }}">Supprimer</a>
+     <hr>
+   {% endfor %}
+
+{% endblock %}

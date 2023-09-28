@@ -1,0 +1,14 @@
+{% extends "base.html.twig" %}
+
+{% block title %}Genre{% endblock %}
+
+{% block content %}
+
+ {% for type in types %}
+    {{ type.name }} <br>
+    <a href="http://localhost/poo/mvcfilmobjet/fupdatetype/{{ type.id_type }}">Modifier</a>
+    <a href="http://localhost/poo/mvcfilmobjet/deletetype/{{ type.id_type }}">Supprimer</a>
+    <hr>
+  {% endfor %}
+
+{% endblock %}

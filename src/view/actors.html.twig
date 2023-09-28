@@ -1,0 +1,16 @@
+{% extends "base.html.twig" %}
+
+{% block title %}Liste Acteurs{% endblock %}
+
+{% block content %}
+
+ {% for actor in actors %}
+    <img src="./public/img/{{ actor.photo}}"> <br/>
+    {{ actor.firstname }} &nbsp;
+    {{ actor.surname }} <br/>
+    <a href="http://localhost/poo/mvcfilmobjet/fupdateactor/{{ actor.id_actor }}">Modifier</a>
+    <a href="http://localhost/poo/mvcfilmobjet/deleteactor/{{ actor.id_actor }}">Supprimer</a>
+    <hr>
+  {% endfor %}
+
+{% endblock %}

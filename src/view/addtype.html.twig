@@ -1,0 +1,40 @@
+{% extends "base.html.twig" %}
+
+{% block title %}Ajoute Genre{% endblock %}
+
+{% block head %}
+
+ <style>
+
+    form  {
+      width: 60%;
+    }
+
+    form textarea {
+      resize: none;
+      width: 60%;
+      min-height: 100px;
+    }
+
+    ul {
+      list-style: none;
+    }
+
+    div {
+      padding: 10px 0;
+    }
+  </style>
+
+{% endblock %}
+
+{% block content %}
+
+  <h2>Ajoute un genre</h2>
+  <form method="post" action="addtype">
+    <div>
+      <input type="text" placeholder="Genre" name="name" required/>
+    </div>
+    <button type="submit">Ajoute genre</button>
+  </form>
+
+{% endblock %}

@@ -1,0 +1,46 @@
+{% extends "base.html.twig" %}
+
+{% block title %}Ajoute Actor{% endblock %}
+
+{% block head %}
+
+ <style>
+
+    form  {
+      width: 60%;
+    }
+
+    form textarea {
+      resize: none;
+      width: 60%;
+      min-height: 100px;
+    }
+
+    ul {
+      list-style: none;
+    }
+
+    div {
+      padding: 10px 0;
+    }
+  </style>
+
+{% endblock %}
+
+{% block content %}
+
+  <h2>Ajoute acteur</h2>
+  <form method="post" action="addactor">
+    <div>
+      <input type="text" placeholder="nom acteur" name="surname" required/>
+    </div>
+    <div>
+      <input type="text" placeholder="prénom acteur" name="firstname" required/>
+    </div>
+    <div>
+      <input type="text" placeholder="photo" name="photo" required/>
+    </div>
+    <button type="submit">Ajoute acteur</button>
+  </form>
+
+{% endblock %}
